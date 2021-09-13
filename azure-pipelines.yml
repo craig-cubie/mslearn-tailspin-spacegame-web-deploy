@@ -3,8 +3,8 @@ trigger:
 
 variables:
   buildConfiguration: 'Release'
-  
 
+# Adding in some comments to test
 stages:
 - stage: 'Build'
   displayName: 'Build the web application'
