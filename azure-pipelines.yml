@@ -18,6 +18,7 @@ stages:
 
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
+      wwwrootDirGulp: 'Tailspin.SpaceGame.Web/wwwroot/node_modules/.bin'
       dotnetSdkVersion: '5.x'
 
     steps:
@@ -39,7 +40,7 @@ stages:
 
     - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
       displayName: 'Write build info'
-      workingDirectory: $(wwwrootDir)
+      workingDirectory: $(wwwrootDirGulp)
 
     - task: DotNetCoreCLI@2
       displayName: 'Restore project dependencies'
